@@ -1,0 +1,45 @@
+{
+  "system_id": "credit-scoring-v1",
+  "name": "Credit Scoring Model",
+  "description": "Machine learning model for automated credit risk assessment. Uses historical financial data to predict loan default probability and assign credit scores to applicants.",
+  "version": "1.0.0",
+  "system_type": "classification",
+  "risk_level": "high",
+  "is_high_risk_eu_ai_act": true,
+  "model_architecture": "XGBoost Gradient Boosting",
+  "training_data_description": "Historical loan application data from 2018-2023, including applicant demographics, financial history, and loan outcomes. Approximately 500,000 records from banking partners.",
+  "input_data_types": ["numeric", "categorical"],
+  "output_data_types": ["probability", "classification"],
+  "owner": "Risk Analytics Team",
+  "developers": ["Data Science Team", "ML Engineering"],
+  "operators": ["Credit Operations", "Risk Management"],
+  "affected_populations": [
+    "Loan applicants",
+    "Existing customers seeking credit increases",
+    "Small business owners",
+    "First-time borrowers"
+  ],
+  "current_phase": "validation_verification",
+  "applicable_regulations": [
+    "GDPR",
+    "EU AI Act",
+    "Equal Credit Opportunity Act",
+    "Fair Credit Reporting Act"
+  ],
+  "industry_sector": "finance",
+  "use_cases": [
+    "Automated initial credit assessment",
+    "Credit limit determination",
+    "Risk-based pricing recommendations"
+  ],
+  "known_limitations": [
+    "Model may underperform for thin-file applicants with limited credit history",
+    "Training data primarily from urban areas, may not generalize well to rural populations",
+    "Does not account for recent income changes not yet reflected in credit reports"
+  ],
+  "prohibited_uses": [
+    "Sole decision-maker for loan denial without human review",
+    "Use for purposes other than credit assessment",
+    "Sharing of individual scores with third parties"
+  ]
+}
